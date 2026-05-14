@@ -1,0 +1,52 @@
+% sample_pavane.tab  --  Synthetic test piece for parser validation
+% Based on a simple Pavane-style chord progression in G tuning
+
+{ A Little Pavane }
+{ by Anonymous }
+
+% Standard 6-course Renaissance lute, G tuning
+% Courses (high to low):  g'  d'  a  f  c  G
+
+b
+S4-4
+
+% Bar 1 — full G chord then a passing tone run
+2aaa aa
+2b
+3c
+3d
+
+b
+
+% Bar 2 — chord on beat 1, arpeggiated feel
+2.abcde
+3f
+3e
+3d
+
+b
+
+% Bar 3 — eighth note run on top two courses
+3a
+3b
+3c
+3b
+3a
+3 a
+3  a
+3  b
+
+b
+
+% Bar 4 — half notes, open strings
+1abcde
+1   de
+
+b
+
+% Bar 5 — whole chord to finish
+0abcde
+
+b
+
+e
