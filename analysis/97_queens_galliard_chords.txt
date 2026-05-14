@@ -1,0 +1,77 @@
+# 97. The Queen's galliard — Chord Table
+
+*Tuning (bass→treble): B1,D2,E2,A2,D3,F#3,B3,E4. Only beats with 3+ simultaneous notes shown.*
+
+| Bar | Beat | Fingering       | Pitches          | Chord Name        |
+|-----|------|-----------------|------------------|-------------------|
+| 2   | 1    | - - - - f - d g | G3, D4, A#4      | G minor           |
+| 2   | 3    | - - - - d - g f | F3, F4, A4       | F major (no 5th)  |
+| 2   | 5    | - - - - b e - d | D#3, A#3, G4     | D# major          |
+| 3   | 1    | - - - - a d d c | D3, A3, D4, F#4  | D major           |
+| 4   | 1    | - - - - f - d g | G3, D4, A#4      | G minor           |
+| 5   | 3    | - a - - - d d c | D2, A3, D4, F#4  | D major           |
+| 6   | 1    | - - - - f - d g | G3, D4, A#4      | G minor           |
+| 6   | 3    | - - - - d - g f | F3, F4, A4       | F major (no 5th)  |
+| 6   | 5    | - - - - b e - d | D#3, A#3, G4     | D# major          |
+| 7   | 1    | - - - - a - d c | D3, D4, F#4      | D major (no 5th)  |
+| 8   | 1    | - - - b - - d d | A#2, D4, G4      | G minor           |
+| 9   | 1    | - - d - - b a d | G2, G3, B3, G4   | G major (no 5th)  |
+| 10  | 1    | - - - b d e d - | A#2, F3, A#3, D4 | A# major          |
+| 10  | 4    | - - - d - b e - | C3, G3, D#4      | C minor           |
+| 11  | 1    | - - b - - d b - | F2, A3, C4       | F major           |
+| 11  | 4    | - - - - - d b b | A3, C4, F4       | F major           |
+| 12  | 1    | - - - b d e d - | A#2, F3, A#3, D4 | A# major          |
+| 12  | 4    | - - - d - b e - | C3, G3, D#4      | C minor           |
+| 13  | 1    | - - - b d e d - | A#2, F3, A#3, D4 | A# major          |
+| 13  | 4    | - - - - d e d - | F3, A#3, D4      | A# major          |
+| 14  | 1    | - - - b d e d - | A#2, F3, A#3, D4 | A# major          |
+| 15  | 1    | - - - b - - d d | A#2, D4, G4      | G minor           |
+| 16  | 1    | - - - - b - e d | D#3, D#4, G4     | D# major (no 5th) |
+| 17  | 3    | - a - - - d d c | D2, A3, D4, F#4  | D major           |
+| 18  | 1    | - - d - - f d d | G2, B3, D4, G4   | G major           |
+| 18  | 4    | - - - b - - d b | A#2, D4, F4      | A# major          |
+| 19  | 1    | - - b - d - b f | F2, F3, C4, A4   | F major           |
+| 19  | 4.5  | - - - a - d b a | A2, A3, C4, E4   | A minor           |
+| 20  | 1    | - - - - - e d d | A#3, D4, G4      | G minor           |
+| 20  | 5    | - - g - - - d d | A#2, D4, G4      | G minor           |
+| 21  | 1    | - - - - a d d c | D3, A3, D4, F#4  | D major           |
+| 21  | 5    | - - - b - - d d | A#2, D4, G4      | G minor           |
+| 22  | 1    | - - f - f - - i | A2, G3, C5       | C (no 3rd)        |
+| 22  | 4    | - - f - e - - f | A2, F#3, A4      | F# minor (no 5th) |
+| 22  | 5    | - - d - f - d g | G2, G3, D4, A#4  | G minor           |
+| 23  | 1    | - - - f - - d f | D3, D4, A4       | D (no 3rd)        |
+| 24  | 2    | - - - - a d - d | D3, A3, G4       | D (no 3rd)        |
+| 25  | 3    | - - - - - b a d | G3, B3, G4       | G major (no 5th)  |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Fingering       | Chord Name        | Occurrences | Notes |
+|-----------------|-------------------|-------------|-------|
+| - - - a - d b a | A minor           | 1           | 4     |
+| - - - - d e d - | A# major          | 1           | 3     |
+| - - - b - - d b | A# major          | 1           | 3     |
+| - - - b d e d - | A# major          | 4           | 4     |
+| - - f - f - - i | C (no 3rd)        | 1           | 3     |
+| - - - d - b e - | C minor           | 2           | 3     |
+| - - - - a d - d | D (no 3rd)        | 1           | 3     |
+| - - - f - - d f | D (no 3rd)        | 1           | 3     |
+| - - - - a d d c | D major           | 2           | 4     |
+| - a - - - d d c | D major           | 2           | 4     |
+| - - - - a - d c | D major (no 5th)  | 1           | 3     |
+| - - - - b e - d | D# major          | 2           | 3     |
+| - - - - b - e d | D# major (no 5th) | 1           | 3     |
+| - - - - - d b b | F major           | 1           | 3     |
+| - - b - - d b - | F major           | 1           | 3     |
+| - - b - d - b f | F major           | 1           | 4     |
+| - - - - d - g f | F major (no 5th)  | 2           | 3     |
+| - - f - e - - f | F# minor (no 5th) | 1           | 3     |
+| - - d - - f d d | G major           | 1           | 4     |
+| - - - - - b a d | G major (no 5th)  | 1           | 3     |
+| - - d - - b a d | G major (no 5th)  | 1           | 4     |
+| - - - - - e d d | G minor           | 1           | 3     |
+| - - - - f - d g | G minor           | 3           | 3     |
+| - - - b - - d d | G minor           | 3           | 3     |
+| - - d - f - d g | G minor           | 1           | 4     |
+| - - g - - - d d | G minor           | 1           | 3     |

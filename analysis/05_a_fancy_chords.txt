@@ -1,0 +1,60 @@
+# 5. Fantasy 5 — Chord Table
+
+*Tuning (bass→treble): B1,D2,E2,A2,D3,F#3,B3,E4. Only beats with 3+ simultaneous notes shown.*
+
+| Bar | Beat | Fingering       | Pitches                        | Chord Name        |
+|-----|------|-----------------|--------------------------------|-------------------|
+| 1   | 1    | - a - - - a a h | D2, F#3, B3, B4                | B minor           |
+| 1   | 5    | - a - - - - a d | D2, B3, G4                     | G major           |
+| 2   | 1    | - a - - - b a - | D2, G3, B3                     | G major           |
+| 3   | 1    | - - - - c b - a | E3, G3, E4                     | E minor (no 5th)  |
+| 3   | 2    | - - - d - d - a | C3, A3, E4                     | A minor           |
+| 4   | 1    | - - - c - a e - | B2, F#3, D#4                   | B major           |
+| 5   | 2    | - - a - - - a d | E2, B3, G4                     | E minor           |
+| 5   | 3    | - - - - c - a d | E3, B3, G4                     | E minor           |
+| 6   | 3.5  | - a c c b a a c | D2, F#2, B2, D#3, F#3, B3, F#4 | B major           |
+| 8   | 2    | - a - - - b a - | D2, G3, B3                     | G major           |
+| 9   | 2    | - - d - - b a - | G2, G3, B3                     | G major (no 5th)  |
+| 10  | 1    | - - c - - d - c | F#2, A3, F#4                   | F# minor (no 5th) |
+| 10  | 4    | - - a - - - f d | E2, E4, G4                     | E minor (no 5th)  |
+| 11  | 1    | - d - - - - d c | F2, D4, F#4                    | D major (no 5th)  |
+| 11  | 4    | - d - - - a - c | F2, F#3, F#4                   | F/F#              |
+| 12  | 1    | - - c - - e c - | F#2, A#3, C#4                  | F# major          |
+| 18  | 4    | - - d - - b - d | G2, G3, G4                     | G                 |
+| 23  | 2.5  | - - a - c c a a | E2, E3, G#3, B3, E4            | E major           |
+| 25  | 1    | - - d - a b - - | G2, D3, G3                     | G (no 3rd)        |
+| 26  | 1    | - - a - - b - a | E2, G3, E4                     | E minor (no 5th)  |
+| 27  | 5    | - a - - - a a - | D2, F#3, B3                    | B minor           |
+| 27  | 7    | - a c c b a a - | D2, F#2, B2, D#3, F#3, B3      | B major           |
+| 33  | 1    | - - a - c c - - | E2, E3, G#3                    | E major (no 5th)  |
+| 35  | 3.5  | - - - c b a a c | B2, D#3, F#3, B3, F#4          | B major           |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Fingering       | Chord Name        | Occurrences | Notes |
+|-----------------|-------------------|-------------|-------|
+| - - - d - d - a | A minor           | 1           | 3     |
+| - - - c - a e - | B major           | 1           | 3     |
+| - - - c b a a c | B major           | 1           | 5     |
+| - a c c b a a - | B major           | 1           | 6     |
+| - a c c b a a c | B major           | 1           | 7     |
+| - a - - - a a - | B minor           | 1           | 3     |
+| - a - - - a a h | B minor           | 1           | 4     |
+| - d - - - - d c | D major (no 5th)  | 1           | 3     |
+| - - a - c c a a | E major           | 1           | 5     |
+| - - a - c c - - | E major (no 5th)  | 1           | 3     |
+| - - - - c - a d | E minor           | 1           | 3     |
+| - - a - - - a d | E minor           | 1           | 3     |
+| - - - - c b - a | E minor (no 5th)  | 1           | 3     |
+| - - a - - - f d | E minor (no 5th)  | 1           | 3     |
+| - - a - - b - a | E minor (no 5th)  | 1           | 3     |
+| - - c - - e c - | F# major          | 1           | 3     |
+| - - c - - d - c | F# minor (no 5th) | 1           | 3     |
+| - d - - - a - c | F/F#              | 1           | 3     |
+| - - d - - b - d | G                 | 1           | 3     |
+| - - d - a b - - | G (no 3rd)        | 1           | 3     |
+| - a - - - - a d | G major           | 1           | 3     |
+| - a - - - b a - | G major           | 2           | 3     |
+| - - d - - b a - | G major (no 5th)  | 1           | 3     |

@@ -82,6 +82,37 @@ click **Acquire** for the Fronimo `.ft3`.
 
 ---
 
+## Poulton Numbers and the Dowland Catalogue
+
+**Poulton numbers** are the standard catalogue reference for John Dowland's works, established in
+Diana Poulton's scholarly book *John Dowland* (1972; revised 1982). Every piece in the corpus is
+assigned a unique number (P1–P100+), making them the musicological shorthand for identifying
+Dowland works unambiguously across manuscripts and editions.
+
+### Filename convention on lutemusic.org
+
+The lutemusic.org database encodes the Poulton number as the **numeric prefix** of each filename:
+
+| Filename | Poulton # | Notes |
+|----------|-----------|-------|
+| `23a_frogg_galliard_2.tab` | P23 | letter suffix = sub-entry within the same number |
+| `40_king_of_denmarks_galliard_long.tab` | P40 | |
+| `40a_king_of_denmarks_galliard_simple.tab` | P40 | alternate arrangement, same Poulton entry |
+| `40_king_of_denmarks_galliard_long_P.tab` | P40 | `_P` = alternate manuscript / tablature source |
+| `46_galliard_to_lachrimae_8C.tab` | P46 | `_8C`/`_9C` = course count variant |
+
+**Coverage:** 113 of 114 Dowland `.tab` files in the database are Poulton-numbered. The sole
+exception is `thomas_monson_galliard.tab`, which is attributed to Dowland but lacks a Poulton
+catalogue entry.
+
+### Analysis focus
+
+This project's primary corpus is **Poulton-numbered works** — pieces where the filename starts
+with a digit. Non-Poulton files (`thomas_monson_galliard.tab`) are out of scope for systematic
+analysis but can still be loaded manually.
+
+---
+
 ## Usage
 
 ### Interactive analysis
@@ -91,7 +122,7 @@ python main.py analyze "path/to/piece.tab"
 python main.py analyze "path/to/piece.ft3"    # requires luteconv
 
 # Specify your tuning so Claude names chords correctly for your instrument:
-python main.py analyze "path/to/piece.tab" --tuning "E4,B3,F#3,D3,A2,E2"
+python main.py analyze "path/to/piece.tab" --tuning "E4,B3,F#3,D3,A2,E2,D2,B1"
 ```
 
 After loading, type queries at the `Query>` prompt:
@@ -143,14 +174,34 @@ in historical manuscripts). Letters continue k, l, m, n for frets 9–12.
 
 ### Tuning
 
-Standard 6-course Renaissance lute (course 1 → 6, high to low): **G D A F C G**
+**Standard Renaissance lute, G-tuning** (courses 1 → 8, high to low):
 
-Alternative — guitar with F# third string (course 1 → 6): **E B F# D A E**
-This tuning sits exactly a minor third below standard G-tuning on every course.
-Pass it to the analyzer so chord names match your instrument:
+| Course | Pitch | Interval from previous |
+|--------|-------|------------------------|
+| 1 | G4 | — |
+| 2 | D4 | P4 |
+| 3 | A3 | P4 |
+| 4 | F3 | M3 |
+| 5 | C3 | P4 |
+| 6 | G2 | P4 |
+| 7 | F2 | **M2** (whole tone — bass courses break the P4 pattern) |
+| 8 | D2 | **m3** (minor third) |
+
+**Alternative — guitar with F# third string**, a minor third below standard G-tuning on every course:
+
+| Course | Pitch | Role in E major |
+|--------|-------|-----------------|
+| 1 | E4 | — |
+| 2 | B3 | P4 |
+| 3 | F#3 | P4 |
+| 4 | D3 | M3 |
+| 5 | A2 | P4 |
+| 6 | E2 | P4 (tonic) |
+| 7 | D2 | M2 (♭7 modal bass) |
+| 8 | B1 | m3 (dominant bass) |
 
 ```bash
-python main.py analyze piece.tab --tuning "E4,B3,F#3,D3,A2,E2"
+python main.py analyze piece.tab --tuning "E4,B3,F#3,D3,A2,E2,D2,B1"
 ```
 
 ---

@@ -1,0 +1,40 @@
+# 99. Mr. Dowland's midnight — Chord Table
+
+*Tuning (bass→treble): B1,D2,E2,A2,D3,F#3,B3,E4. Only beats with 3+ simultaneous notes shown.*
+
+| Bar | Beat | Fingering       | Pitches            | Chord Name        |
+|-----|------|-----------------|--------------------|-------------------|
+| 1   | 1    | - - - c - a a - | B2, F#3, B3        | B (no 3rd)        |
+| 1   | 4    | - - - c - a d - | B2, F#3, D4        | B minor           |
+| 2   | 1    | - - - c - a a - | B2, F#3, B3        | B (no 3rd)        |
+| 2   | 4    | - - d - - b d - | G2, G3, D4         | G (no 3rd)        |
+| 2   | 5    | - - c - - e c c | F#2, A#3, C#4, F#4 | F# major          |
+| 3   | 1    | - - - c - a a - | B2, F#3, B3        | B (no 3rd)        |
+| 3   | 3.5  | - - - c - a d - | B2, F#3, D4        | B minor           |
+| 4   | 1    | - - - c - a a - | B2, F#3, B3        | B (no 3rd)        |
+| 4   | 4    | - - c - - e c c | F#2, A#3, C#4, F#4 | F# major          |
+| 5   | 2    | - - - - c - a d | E3, B3, G4         | E minor           |
+| 5   | 3.5  | - - - - f f d - | G3, B3, D4         | G major           |
+| 6   | 1    | - - - - a - d c | D3, D4, F#4        | D major (no 5th)  |
+| 6   | 2.5  | - - - - c - c a | E3, C#4, E4        | C# minor (no 5th) |
+| 6   | 3.5  | - - c - - a c - | F#2, F#3, C#4      | F# (no 3rd)       |
+| 7   | 3    | - - - - c - a d | E3, B3, G4         | E minor           |
+| 8   | 1    | - - - - a - d c | D3, D4, F#4        | D major (no 5th)  |
+| 8   | 3    | - - c - - a c - | F#2, F#3, C#4      | F# (no 3rd)       |
+| 8   | 4.5  | - - - c - a a - | B2, F#3, B3        | B (no 3rd)        |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Fingering       | Chord Name        | Occurrences | Notes |
+|-----------------|-------------------|-------------|-------|
+| - - - c - a a - | B (no 3rd)        | 5           | 3     |
+| - - - c - a d - | B minor           | 2           | 3     |
+| - - - - c - c a | C# minor (no 5th) | 1           | 3     |
+| - - - - a - d c | D major (no 5th)  | 2           | 3     |
+| - - - - c - a d | E minor           | 2           | 3     |
+| - - c - - a c - | F# (no 3rd)       | 2           | 3     |
+| - - c - - e c c | F# major          | 2           | 4     |
+| - - d - - b d - | G (no 3rd)        | 1           | 3     |
+| - - - - f f d - | G major           | 1           | 3     |

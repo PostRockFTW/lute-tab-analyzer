@@ -1,0 +1,133 @@
+# The Frog Galliard — Chord Table
+
+*Using pre-computed pitch fields directly. Only beats with 2+ simultaneous notes shown.*
+
+| Bar | Beat | Pitches | Chord Name |
+|-----|------|---------|------------|
+| 1 | 1 | G#4, E4, B3, E2 | E major |
+| 1 | 2 | F#4, D#4, B3, B2 | B major |
+| 2 | 1 | E4, C#4, G#3, C#3 | C# minor |
+| 2 | 2 | D#4, B3, G#2 | G# major |
+| 3 | 1 | C#4, A3, A2 | A major |
+| 3 | 3 | E4, B3, G#3, E2 | E major |
+| 4 | 1 | D#4, F#3, B2 | B major |
+| 5 | 1 | G#4, B3, E2 | E major |
+| 6 | 1 | A4, C#4, F#2 | F# major |
+| 6 | 3 | F#4, A2 | F# (no 3rd) |
+| 7 | 2 | F#3 (single) | — |
+| 8 | 1 | D#4, B3, F#3, B2 | B major |
+| 9 | 1 | G#4, B3, E2 | E major |
+| 9 | 3 | F#4, B3, F#3, B2 | B major |
+| 10 | 1 | E4, C#4, G#3, C#3 | C# minor |
+| 10 | 3 | D#4, B3, G#2 | G# major |
+| 11 | 1 | C#4, A3, A2 | A major |
+| 11 | 4 | E4, B3, G#3, E2 | E major |
+| 12 | 1 | F#4, B3, F#3, D2 | B major |
+| 13 | 1 | G#4, B3, E2 | E major |
+| 13 | 4 | A4, A2 | A (no 3rd) |
+| 14 | 2 | G#4, B2 | E/G# (no 5th) |
+| 15 | 2 | E3 (single) | — |
+| 16 | 1 | E4, B3, G#3, E2 | E major |
+| 17 | 1 | G#4, B3, E2 | E major |
+| 17 | 4 | F#4, B3, F#3, B2 | B major |
+| 18 | 1 | E4, C#3 | C# minor (partial) |
+| 18 | 4 | D#4, B3, G#2 | G# major |
+| 19 | 1 | C#4, A3, A2 | A major |
+| 19 | 4 | E4, B3, G#3, E2 | E major |
+| 20 | 1 | D#4, F#3, D2 | B major (no 5th, w/ D) |
+| 21 | 1 | G#4, B3, E2 | E major |
+| 22 | 1 | A4, C#4, F#2 | F# major |
+| 22 | 3 | F#4, A2 | F# (no 3rd) |
+| 23 | 1 | D#4, F#3, D2 | B major (no 5th, w/ D) |
+| 24 | 1 | D#4, F#3, D2 | B major (no 5th, w/ D) |
+| 25 | 1 | A#5, A5, B3 | — (ornamental) |
+| 25 | 2 | A#5, A5, G#3 | — (ornamental) |
+| 25 | 3 | A#5, A5, F#3 | — (ornamental) |
+| 26 | 1 | A#5, A5, G#3 | — (ornamental) |
+| 26 | 2 | A#5, A5, F#3 | — (ornamental) |
+| 26 | 3 | A#5, A5, E3 | — (ornamental) |
+| 27 | 1 | A#5, A5, F#3 | — (ornamental) |
+| 27 | 2 | A#5, A5, D3 | — (ornamental) |
+| 27 | 3 | A#5, A5, F#3 | — (ornamental) |
+| 28 | 1 | A#5, A5, F#3 | — (ornamental) |
+| 28 | 2 | A#5, A5, E3 | — (ornamental) |
+| 28 | 3 | A#5, A5, F#3 | — (ornamental) |
+| 29 | 1 | A#5, A5, B3 | — (ornamental) |
+| 29 | 2 | A#5, A5, G#3 | — (ornamental) |
+| 29 | 3 | A#5, A5, A#3 | — (ornamental) |
+| 30 | 1 | A#5, A5, D3 | — (ornamental) |
+| 30 | 2 | A#5, A5, F#3 | — (ornamental) |
+| 30 | 3 | A#5, A5, E3 | — (ornamental) |
+| 31 | 1 | A#5, A5, D3 | — (ornamental) |
+| 31 | 2 | A#5, A5, E3 | — (ornamental) |
+| 31 | 3 | A#5, A5, C3 | — (ornamental) |
+| 32 | 1 | E4, B3, G#3, E2 | E major |
+| 33 | 1 | E4, C#4, A3, A2 | A major |
+| 34 | 1 | A4, E4, C#4, A2 | A major |
+| 35 | 1 | B4, B3, G#2 | E major (1st inv.) |
+| 35 | 3 | G#4, B3 | E major (partial) |
+| 36 | 1 | E4, B3, E3 | E major |
+| 36 | 3 | G#4, B3, E3 | E major |
+| 37 | 1 | A4, C#4, F#2 | F# major |
+| 37 | 3 | G#4, B2 | E/G# (no 5th) |
+| 38 | 1 | F#4, C#4, A3, F#2 | F# major |
+| 38 | 2 | F#4, G#3, C#3 | C# minor |
+| 39 | 1 | F#4, C#4, A#3, F#2 | F# major (♭3 = A#) |
+| 40 | 1 | F#4, C#4, A#3, F#2 | F# major (♭3 = A#) |
+| 41 | 1 | G#4, B3, E3, E2 | E major |
+| 41 | 3 | F#4, B3, B2 | B major |
+| 42 | 1 | E4, C#4, G#3, C#3 | C# minor |
+| 42 | 3 | D#4, B3, G#2 | G# major |
+| 43 | 1 | C#4, A3, E3, A2 | A major |
+| 43 | 4 | E4, B3, G#3, E2 | E major |
+| 44 | 1 | D#4, F#3, D2 | B major (no 5th, w/ D) |
+| 45 | 1 | G#4, B3, E2 | E major |
+| 45 | 4 | A4, A2 | A (no 3rd) |
+| 46 | 2 | G#4, B3, B2 | E major (no root) |
+| 47 | 2 | E3 (single) | — |
+| 48 | 1 | E4, B3, G#3, E2 | E major |
+| 49 | 1 | E4, C#4, A3, A2 | A major |
+| 51 | 1 | B4, G#2 | — (interval only) |
+| 51 | 4 | G#4, B3 | E major (partial) |
+| 52 | 1 | E4, B3, G#3, E2 | E major |
+| 53 | 1 | A4, F#2 | F# (no 3rd) |
+| 53 | 4 | G#4, B2 | E/G# (no 5th) |
+| 54 | 1 | F#4, C#4, A3, F#2 | F# major |
+| 54 | 2 | F#4, G#3, C#3 | C# minor |
+| 55 | 3 | B3 (single) | — |
+| 56 | 1 | F#4, C#4, A#3, F#2 | F# major (♭3 = A#) |
+| 57 | 1 | G#4, E2 | E (no 3rd/5th) |
+| 57 | 3 | F#4, B2 | B (no 3rd) |
+| 58 | 1 | E4, C#3 | C# minor (partial) |
+| 58 | 3 | D#4, G#2 | G# major (partial) |
+| 59 | 1 | C#4, A2 | A major (partial) |
+| 59 | 3 | E4, E2 | E (octave) |
+| 60 | 1 | D#4, D2 | — (interval) |
+| 61 | 1 | G#4, E2 | E (partial) |
+| 61 | 3 | A4, A2 | A (octave) |
+| 62 | 2 | D#4, D2 | — (interval) |
+| 63 | 1 | E4, E2 | E (octave) |
+| 64 | 1 | E4, B3, G#3, E2 | E major |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Chord Type | Count |
+|------------|-------|
+| **E major** (full or partial, all inversions) | 28 |
+| **B major** (full or partial) | 9 |
+| **A major** (full or partial) | 9 |
+| **C# minor** (full or partial) | 6 |
+| **F# major** (full or partial) | 8 |
+| **G# major** (full or partial) | 6 |
+| **F# major with ♭3 (A#)** — i.e. F# minor/Bmaj context | 3 |
+| **Ornamental runs (bars 25–31, upper-voice tremolos)** | 21 |
+| **Dyads / intervals only (no clear triad)** | 7 |
+
+**Key observations:**
+- The piece is firmly in **E major**, with E major the overwhelming harmonic anchor.
+- The progression **E – C#m – A – B** (I – vi – IV – V) recurs as the main cadential pattern across all three strains.
+- **G# major** functions as the dominant of C# minor (V/vi).
+- **F# major** appears as the II chord (major II, Lydian-flavoured), often preceding B major.
+- Bars 25–31 contain a distinctive ornamented passage with repeated upper-voice drone pitches (A#5/A5 — possibly scordatura or a notational convention) over a moving inner-voice bass line.

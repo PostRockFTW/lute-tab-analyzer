@@ -1,0 +1,60 @@
+# 56. Mrs White's nothing — Chord Table
+
+*Tuning (bass→treble): B1,D2,E2,A2,D3,F#3,B3,E4. Only beats with 3+ simultaneous notes shown.*
+
+| Bar | Beat | Fingering       | Pitches                 | Chord Name        |
+|-----|------|-----------------|-------------------------|-------------------|
+| 1   | 1    | - - - - c - a d | E3, B3, G4              | E minor           |
+| 2   | 1    | - - - - a - a c | D3, B3, F#4             | B minor           |
+| 2   | 3    | - - - - c b a a | E3, G3, B3, E4          | E minor           |
+| 2   | 4    | - - - c - a e - | B2, F#3, D#4            | B major           |
+| 2   | 6    | - - d - c - a a | G2, E3, B3, E4          | E minor           |
+| 3   | 1    | - - c - e - c f | F#2, F#3, C#4, A4       | F# minor          |
+| 3   | 3    | - - a - - - a d | E2, B3, G4              | E minor           |
+| 3   | 4    | - - - c b - a c | B2, D#3, B3, F#4        | B major           |
+| 4   | 1    | - - a - - - a d | E2, B3, G4              | E minor           |
+| 4   | 4    | - - d - f - d h | G2, G3, D4, B4          | G major           |
+| 5   | 1    | - - - - a - a c | D3, B3, F#4             | B minor           |
+| 5   | 3    | - - - - c b a a | E3, G3, B3, E4          | E minor           |
+| 5   | 4    | - - - c - a e - | B2, F#3, D#4            | B major           |
+| 6   | 1    | - - - c - - d c | B2, D4, F#4             | B minor           |
+| 6   | 3    | - - - a - a - f | A2, F#3, A4             | F# minor (no 5th) |
+| 6   | 4    | - - d - f - d h | G2, G3, D4, B4          | G major           |
+| 7   | 1    | - - - - a a - f | D3, F#3, A4             | D major           |
+| 7   | 3    | - - - - c - a d | E3, B3, G4              | E minor           |
+| 7   | 4    | - - - c - a a c | B2, F#3, B3, F#4        | B (no 3rd)        |
+| 8   | 1    | - - a - c - a a | E2, E3, B3, E4          | E (no 3rd)        |
+| 8   | 4    | - - - c - a a c | B2, F#3, B3, F#4        | B (no 3rd)        |
+| 9   | 1    | - - a - - - a d | E2, B3, G4              | E minor           |
+| 9   | 4    | - - - c b a a c | B2, D#3, F#3, B3, F#4   | B major           |
+| 10  | 1    | - - - c - - d c | B2, D4, F#4             | B minor           |
+| 10  | 3    | - - - a - a - f | A2, F#3, A4             | F# minor (no 5th) |
+| 10  | 4    | - - d - f - d h | G2, G3, D4, B4          | G major           |
+| 11  | 1    | - - - - a a - f | D3, F#3, A4             | D major           |
+| 11  | 3    | - - - - c - a d | E3, B3, G4              | E minor           |
+| 11  | 4    | - - - c - a a c | B2, F#3, B3, F#4        | B (no 3rd)        |
+| 12  | 1    | - - a - - - a d | E2, B3, G4              | E minor           |
+| 13  | 1    | - - a c c c a a | E2, B2, E3, G#3, B3, E4 | E major           |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Fingering       | Chord Name        | Occurrences | Notes |
+|-----------------|-------------------|-------------|-------|
+| - - - c - a a c | B (no 3rd)        | 3           | 4     |
+| - - - c - a e - | B major           | 2           | 3     |
+| - - - c b - a c | B major           | 1           | 4     |
+| - - - c b a a c | B major           | 1           | 5     |
+| - - - - a - a c | B minor           | 2           | 3     |
+| - - - c - - d c | B minor           | 2           | 3     |
+| - - - - a a - f | D major           | 2           | 3     |
+| - - a - c - a a | E (no 3rd)        | 1           | 4     |
+| - - a c c c a a | E major           | 1           | 6     |
+| - - - - c - a d | E minor           | 3           | 3     |
+| - - - - c b a a | E minor           | 2           | 4     |
+| - - a - - - a d | E minor           | 4           | 3     |
+| - - d - c - a a | E minor           | 1           | 4     |
+| - - c - e - c f | F# minor          | 1           | 4     |
+| - - - a - a - f | F# minor (no 5th) | 2           | 3     |
+| - - d - f - d h | G major           | 3           | 4     |

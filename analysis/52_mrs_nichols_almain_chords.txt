@@ -1,0 +1,39 @@
+# 52. Mrs Nicols' Almain — Chord Table
+
+*Tuning (bass→treble): B1,D2,E2,A2,D3,F#3,B3,E4. Only beats with 3+ simultaneous notes shown.*
+
+| Bar | Beat | Fingering       | Pitches           | Chord Name        |
+|-----|------|-----------------|-------------------|-------------------|
+| 1   | 1    | - - a - c c - a | E2, E3, G#3, E4   | E major (no 5th)  |
+| 2   | 1    | - - - - b - a c | D#3, B3, F#4      | B major           |
+| 2   | 3    | - - - c b - a c | B2, D#3, B3, F#4  | B major           |
+| 3   | 1    | - - h - - a a h | B2, F#3, B3, B4   | B (no 3rd)        |
+| 3   | 2    | - - e - - f - e | G#2, B3, G#4      | G# minor (no 5th) |
+| 3   | 3    | - - - c b - a c | B2, D#3, B3, F#4  | B major           |
+| 4   | 1    | - - - e - c c a | C#3, G#3, C#4, E4 | C# minor          |
+| 4   | 3.5  | - - c - - d - c | F#2, A3, F#4      | F# minor (no 5th) |
+| 5   | 1    | - - a - - c a a | E2, G#3, B3, E4   | E major           |
+| 5   | 3.5  | - - c - - d c - | F#2, A3, C#4      | F# minor          |
+| 5   | 4.5  | - - - e - - c e | C#3, C#4, G#4     | C# (no 3rd)       |
+| 6   | 1    | - - - - b a a c | D#3, F#3, B3, F#4 | B major           |
+| 6   | 3.5  | - - - c - a a c | B2, F#3, B3, F#4  | B (no 3rd)        |
+| 6   | 5    | - - a - - c a a | E2, G#3, B3, E4   | E major           |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Fingering       | Chord Name        | Occurrences | Notes |
+|-----------------|-------------------|-------------|-------|
+| - - - c - a a c | B (no 3rd)        | 1           | 4     |
+| - - h - - a a h | B (no 3rd)        | 1           | 4     |
+| - - - - b - a c | B major           | 1           | 3     |
+| - - - - b a a c | B major           | 1           | 4     |
+| - - - c b - a c | B major           | 2           | 4     |
+| - - - e - - c e | C# (no 3rd)       | 1           | 3     |
+| - - - e - c c a | C# minor          | 1           | 4     |
+| - - a - - c a a | E major           | 2           | 4     |
+| - - a - c c - a | E major (no 5th)  | 1           | 4     |
+| - - c - - d c - | F# minor          | 1           | 3     |
+| - - c - - d - c | F# minor (no 5th) | 1           | 3     |
+| - - e - - f - e | G# minor (no 5th) | 1           | 3     |

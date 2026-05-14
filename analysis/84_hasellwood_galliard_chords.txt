@@ -1,0 +1,68 @@
+# 84. Hasellwood's galliard — Chord Table
+
+*Tuning (bass→treble): B1,D2,E2,A2,D3,F#3,B3,E4. Only beats with 3+ simultaneous notes shown.*
+
+| Bar | Beat | Fingering       | Pitches             | Chord Name  |
+|-----|------|-----------------|---------------------|-------------|
+| 1   | 1    | - - - c - a a c | B2, F#3, B3, F#4    | B (no 3rd)  |
+| 1   | 2    | - - c - - a c - | F#2, F#3, C#4       | F# (no 3rd) |
+| 2   | 1    | - - - - a d d c | D3, A3, D4, F#4     | D major     |
+| 2   | 3    | - - c - e e c - | F#2, F#3, A#3, C#4  | F# major    |
+| 3   | 1    | - - - f e d d f | D3, F#3, A3, D4, A4 | D major     |
+| 3   | 2    | - - - a - d c a | A2, A3, C#4, E4     | A major     |
+| 3   | 3.5  | - - - a - a c - | A2, F#3, C#4        | F# minor    |
+| 4   | 1    | - - d - c - a - | G2, E3, B3          | E minor     |
+| 4   | 2    | - - c - e f - - | F#2, F#3, B3        | B (no 3rd)  |
+| 4   | 4    | - - - - b a a - | D#3, F#3, B3        | B major     |
+| 5   | 1.5  | - - - - a a a - | D3, F#3, B3         | B minor     |
+| 5   | 2.5  | - - - c - a d - | B2, F#3, D4         | B minor     |
+| 5   | 3.5  | - - - - e e c - | F#3, A#3, C#4       | F# major    |
+| 6   | 1    | - - - - a d d c | D3, A3, D4, F#4     | D major     |
+| 6   | 2    | - - c - - a c - | F#2, F#3, C#4       | F# (no 3rd) |
+| 6   | 3.75 | - - - - a d d c | D3, A3, D4, F#4     | D major     |
+| 7   | 1    | - - - a - d c a | A2, A3, C#4, E4     | A major     |
+| 7   | 2    | - - a - c - a d | E2, E3, B3, G4      | E minor     |
+| 7   | 4    | - - d - - - a a | G2, B3, E4          | E minor     |
+| 8   | 1    | - - - - a d d - | D3, A3, D4          | D (no 3rd)  |
+| 8   | 2    | - - - a c - d - | A2, E3, D4          | D (no 3rd)  |
+| 8   | 4    | - - - - e d d - | F#3, A3, D4         | D major     |
+| 9   | 1    | - - - - a d d c | D3, A3, D4, F#4     | D major     |
+| 9   | 1.5  | - - - - a d d c | D3, A3, D4, F#4     | D major     |
+| 9   | 2    | - - - - - d c a | A3, C#4, E4         | A major     |
+| 10  | 1    | - - - - a d d c | D3, A3, D4, F#4     | D major     |
+| 10  | 2    | - - - - e e c c | F#3, A#3, C#4, F#4  | F# major    |
+| 11  | 1    | - - - c - a d - | B2, F#3, D4         | B minor     |
+| 11  | 1.5  | - - - - a d d c | D3, A3, D4, F#4     | D major     |
+| 11  | 2.5  | - - - c - a d - | B2, F#3, D4         | B minor     |
+| 11  | 3    | - - - - e e c - | F#3, A#3, C#4       | F# major    |
+| 12  | 1    | - - a - - b a - | E2, G3, B3          | E minor     |
+| 12  | 1.5  | - - c e - f c - | F#2, C#3, B3, C#4   | F# (no 3rd) |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Fingering       | Chord Name  | Occurrences | Notes |
+|-----------------|-------------|-------------|-------|
+| - - - - - d c a | A major     | 1           | 3     |
+| - - - a - d c a | A major     | 2           | 4     |
+| - - - c - a a c | B (no 3rd)  | 1           | 4     |
+| - - c - e f - - | B (no 3rd)  | 1           | 3     |
+| - - - - b a a - | B major     | 1           | 3     |
+| - - - - a a a - | B minor     | 1           | 3     |
+| - - - c - a d - | B minor     | 3           | 3     |
+| - - - - a d d - | D (no 3rd)  | 1           | 3     |
+| - - - a c - d - | D (no 3rd)  | 1           | 3     |
+| - - - - a d d c | D major     | 7           | 4     |
+| - - - - e d d - | D major     | 1           | 3     |
+| - - - f e d d f | D major     | 1           | 5     |
+| - - a - - b a - | E minor     | 1           | 3     |
+| - - a - c - a d | E minor     | 1           | 4     |
+| - - d - - - a a | E minor     | 1           | 3     |
+| - - d - c - a - | E minor     | 1           | 3     |
+| - - c - - a c - | F# (no 3rd) | 2           | 3     |
+| - - c e - f c - | F# (no 3rd) | 1           | 4     |
+| - - - - e e c - | F# major    | 2           | 3     |
+| - - - - e e c c | F# major    | 1           | 4     |
+| - - c - e e c - | F# major    | 1           | 4     |
+| - - - a - a c - | F# minor    | 1           | 3     |

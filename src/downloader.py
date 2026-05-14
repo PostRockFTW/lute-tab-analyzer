@@ -42,7 +42,7 @@ def list_composer_tabs(composer: str) -> list[str]:
     return sorted(set(re.findall(r'href="([^"]+\.tab)"', html, re.IGNORECASE)))
 
 
-def download_tab(composer: str, filename: str, dest_dir: str | Path = ".") -> Path:
+def download_tab(composer: str, filename: str, dest_dir: str | Path = "tabs") -> Path:
     """
     Download a single .tab file and save it to dest_dir.
     filename may include or omit the .tab extension.
@@ -52,12 +52,13 @@ def download_tab(composer: str, filename: str, dest_dir: str | Path = ".") -> Pa
         filename += ".tab"
     url = f"{_TAB_BASE}/{composer}/{filename}"
     content = _fetch(url)
+    Path(dest_dir).mkdir(parents=True, exist_ok=True)
     dest = Path(dest_dir) / filename
     dest.write_text(content, encoding="utf-8")
     return dest
 
 
-def download_pdf(composer: str, filename: str, dest_dir: str | Path = ".") -> Path:
+def download_pdf(composer: str, filename: str, dest_dir: str | Path = "pdfs") -> Path:
     """
     Download the PDF for a piece and save it to dest_dir.
     filename may include or omit the .tab or .pdf extension.
@@ -72,6 +73,7 @@ def download_pdf(composer: str, filename: str, dest_dir: str | Path = ".") -> Pa
 
     stem = re.sub(r"\.(tab|pdf)$", "", filename, flags=re.IGNORECASE)
     pdf_name = stem + ".pdf"
+    Path(dest_dir).mkdir(parents=True, exist_ok=True)
     dest = Path(dest_dir) / pdf_name
 
     # Strategy 1: known PDF URL pattern (lutemusic.org/composers/{Composer}/pdf/{stem}.pdf)

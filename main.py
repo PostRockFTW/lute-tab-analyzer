@@ -2,11 +2,12 @@
 Lute Tablature Analyzer — CLI entry point.
 
 Commands:
-  search    Search wp.lutemusic.org for pieces by keyword.
-  list      List all .tab files available for a composer.
-  download  Download a .tab file from lutemusic.org.
-  analyze   Load a .tab or .ft3 file and enter an interactive AI query loop.
-  compare   Load two files and report structural differences (validation).
+  search                Search wp.lutemusic.org for pieces by keyword.
+  list                  List all .tab files available for a composer.
+  download              Download a .tab file from lutemusic.org.
+  download-all-poulton  Batch-download all Poulton-numbered tabs for a composer.
+  analyze               Load a .tab or .ft3 file and enter an interactive AI query loop.
+  compare               Load two files and report structural differences (validation).
 
 Usage:
   python main.py search "dowland galliard"
@@ -16,7 +17,10 @@ Usage:
   python main.py compare piece.ft3 piece.tab
 """
 
+import re
 import sys
+import time
+import random
 from pathlib import Path
 import click
 from rich.console import Console
@@ -129,7 +133,7 @@ def list_tabs(composer: str):
 @cli.command()
 @click.argument("composer")
 @click.argument("filename")
-@click.option("--out", "-o", default=".", help="Output directory (default: current dir)")
+@click.option("--out", "-o", default="tabs", help="Output directory (default: tabs/)")
 def download(composer: str, filename: str, out: str):
     """Download a .tab file from lutemusic.org.
 
@@ -151,7 +155,7 @@ def download(composer: str, filename: str, out: str):
 @cli.command(name="download-pdf")
 @click.argument("composer")
 @click.argument("filename")
-@click.option("--out", "-o", default=".", help="Output directory (default: current dir)")
+@click.option("--out", "-o", default="pdfs", help="Output directory (default: pdfs/)")
 def download_pdf(composer: str, filename: str, out: str):
     """Download the PDF for a piece from lutemusic.org.
 
@@ -168,6 +172,145 @@ def download_pdf(composer: str, filename: str, out: str):
         console.print(f"\n[red]Failed:[/red] {e}")
         return
     console.print(f"[green]saved to {dest}[/green]")
+
+
+# ── download-all-poulton command ───────────────────────────────────────────────
+
+@cli.command(name="download-all-poulton")
+@click.option("--composer", default="Dowland", show_default=True, help="Composer directory on lutemusic.org")
+@click.option("--out", "-o", default="tabs", show_default=True, help="Output directory")
+@click.option("--delay-min", default=1.0, show_default=True, help="Min seconds between requests")
+@click.option("--delay-max", default=5.0, show_default=True, help="Max seconds between requests")
+@click.option("--dry-run", is_flag=True, help="List files that would be downloaded without downloading")
+def download_all_poulton(composer: str, out: str, delay_min: float, delay_max: float, dry_run: bool):
+    """Batch-download all Poulton-numbered .tab files not already present in OUT.
+
+    Poulton numbers are the standard catalogue reference from Diana Poulton's
+    John Dowland (1972/1982). Files are identified by a numeric prefix in the filename.
+
+    Example: python main.py download-all-poulton
+             python main.py download-all-poulton --dry-run
+    """
+    from src.downloader import list_composer_tabs, download_tab
+
+    console.print(f"Fetching file list for [bold]{composer}[/bold]...")
+    all_tabs = list_composer_tabs(composer)
+
+    poulton = [f for f in all_tabs if re.match(r'^\d+[a-z]?_', f)]
+    out_path = Path(out)
+    already = {p.name for p in out_path.glob("*.tab")} if out_path.exists() else set()
+
+    to_download = [f for f in poulton if f not in already]
+    skipped = len(poulton) - len(to_download)
+
+    console.print(
+        f"Found [cyan]{len(poulton)}[/cyan] Poulton-numbered files. "
+        f"[yellow]{skipped}[/yellow] already present, "
+        f"[green]{len(to_download)}[/green] to download."
+    )
+
+    if not to_download:
+        console.print("[green]Nothing to do.[/green]")
+        return
+
+    if dry_run:
+        console.print("\n[dim]Dry run — files that would be downloaded:[/dim]")
+        for f in to_download:
+            console.print(f"  {f}")
+        return
+
+    downloaded = 0
+    failed = 0
+    for i, filename in enumerate(to_download, 1):
+        console.print(f"[[cyan]{i}/{len(to_download)}[/cyan]] {filename}", end=" ")
+        try:
+            dest = download_tab(composer, filename, dest_dir=out)
+            console.print(f"[green]OK[/green]")
+            downloaded += 1
+        except Exception as e:
+            console.print(f"[red]FAIL: {e}[/red]")
+            failed += 1
+        if i < len(to_download):
+            time.sleep(random.uniform(delay_min, delay_max))
+
+    console.print(
+        f"\nDone. [green]{downloaded}[/green] downloaded, "
+        f"[yellow]{skipped}[/yellow] skipped, "
+        f"[red]{failed}[/red] failed."
+    )
+
+
+# ── download-all-pdfs command ─────────────────────────────────────────────────
+
+@cli.command(name="download-all-pdfs")
+@click.option("--composer", default="Dowland", show_default=True, help="Composer directory on lutemusic.org")
+@click.option("--tabs-dir", default="tabs", show_default=True, help="Directory containing .tab files")
+@click.option("--out", "-o", default="pdfs", show_default=True, help="Output directory for PDFs")
+@click.option("--delay-min", default=1.0, show_default=True, help="Min seconds between requests")
+@click.option("--delay-max", default=5.0, show_default=True, help="Max seconds between requests")
+@click.option("--dry-run", is_flag=True, help="List files that would be downloaded without downloading")
+def download_all_pdfs(composer: str, tabs_dir: str, out: str, delay_min: float, delay_max: float, dry_run: bool):
+    """Batch-download PDFs for all .tab files not already present in OUT.
+
+    Scans TABS_DIR for .tab files and downloads the matching PDF for any that
+    don't already have one in OUT.
+
+    Example: python main.py download-all-pdfs
+             python main.py download-all-pdfs --dry-run
+    """
+    from src.downloader import download_pdf as _dl_pdf
+
+    tabs_path = Path(tabs_dir)
+    out_path  = Path(out)
+
+    tabs = sorted(tabs_path.glob("*.tab"))
+    if not tabs:
+        console.print(f"[yellow]No .tab files found in {tabs_dir}/[/yellow]")
+        return
+
+    pdf_stems = {p.stem for p in out_path.glob("*.pdf")} if out_path.exists() else set()
+
+    to_download = [t for t in tabs if t.stem not in pdf_stems]
+    skipped = len(tabs) - len(to_download)
+
+    console.print(
+        f"Found [cyan]{len(tabs)}[/cyan] tab files. "
+        f"[yellow]{skipped}[/yellow] already have PDFs, "
+        f"[green]{len(to_download)}[/green] to download."
+    )
+
+    if not to_download:
+        console.print("[green]Nothing to do.[/green]")
+        return
+
+    if dry_run:
+        console.print("\n[dim]Dry run — PDFs that would be downloaded:[/dim]")
+        for t in to_download:
+            console.print(f"  {t.stem}.pdf")
+        return
+
+    downloaded = failed = 0
+    for i, tab_path in enumerate(to_download, 1):
+        stem = tab_path.stem
+        console.print(f"[[cyan]{i}/{len(to_download)}[/cyan]] {stem}.pdf", end=" ")
+        try:
+            _dl_pdf(composer, stem, dest_dir=out)
+            console.print("[green]OK[/green]")
+            downloaded += 1
+        except FileNotFoundError:
+            console.print("[yellow]not found on server[/yellow]")
+            failed += 1
+        except Exception as e:
+            console.print(f"[red]FAIL: {e}[/red]")
+            failed += 1
+        if i < len(to_download):
+            time.sleep(random.uniform(delay_min, delay_max))
+
+    console.print(
+        f"\nDone. [green]{downloaded}[/green] downloaded, "
+        f"[yellow]{skipped}[/yellow] skipped, "
+        f"[red]{failed}[/red] failed."
+    )
 
 
 # ── analyze command ────────────────────────────────────────────────────────────

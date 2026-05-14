@@ -1,0 +1,32 @@
+# 55. Mrs. Winter's Jump — Chord Table
+
+*Tuning (bass→treble): B1,D2,E2,A2,D3,F#3,B3,E4. Only beats with 3+ simultaneous notes shown.*
+
+| Bar | Beat | Fingering       | Pitches           | Chord Name |
+|-----|------|-----------------|-------------------|------------|
+| 1   | 4    | - - - e - d - a | C#3, A3, E4       | A major    |
+| 3   | 2    | - - d - a b d - | G2, D3, G3, D4    | G (no 3rd) |
+| 4   | 1    | - - - - c c a - | E3, G#3, B3       | E major    |
+| 4   | 4    | - - - a c d - - | A2, E3, A3        | A (no 3rd) |
+| 5   | 5.5  | - - - e - d - a | C#3, A3, E4       | A major    |
+| 7   | 2.5  | - - d - a b d - | G2, D3, G3, D4    | G (no 3rd) |
+| 8   | 2.5  | - - - a c d - - | A2, E3, A3        | A (no 3rd) |
+| 10  | 4    | - - - - c c a - | E3, G#3, B3       | E major    |
+| 11  | 2    | - - - a - d c a | A2, A3, C#4, E4   | A major    |
+| 12  | 1    | - - c - - d c c | F#2, A3, C#4, F#4 | F# minor   |
+| 12  | 2    | - - a - - - a e | E2, B3, G#4       | E major    |
+| 15  | 6    | - - - e - d - a | C#3, A3, E4       | A major    |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Fingering       | Chord Name | Occurrences | Notes |
+|-----------------|------------|-------------|-------|
+| - - - a c d - - | A (no 3rd) | 2           | 3     |
+| - - - a - d c a | A major    | 1           | 4     |
+| - - - e - d - a | A major    | 3           | 3     |
+| - - - - c c a - | E major    | 2           | 3     |
+| - - a - - - a e | E major    | 1           | 3     |
+| - - c - - d c c | F# minor   | 1           | 4     |
+| - - d - a b d - | G (no 3rd) | 2           | 4     |

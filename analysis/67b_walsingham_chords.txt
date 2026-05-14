@@ -1,0 +1,60 @@
+# 67b. Walsingham — Chord Table
+
+*Tuning (bass→treble): B1,D2,E2,A2,D3,F#3,B3,E4. Only beats with 3+ simultaneous notes shown.*
+
+| Bar | Beat | Fingering       | Pitches          | Chord Name       |
+|-----|------|-----------------|------------------|------------------|
+| 1   | 1    | - - d - - f d d | G2, B3, D4, G4   | G major          |
+| 1   | 5    | - - - f e - d f | D3, F#3, D4, A4  | D major          |
+| 2   | 1    | - - d - - f d d | G2, B3, D4, G4   | G major          |
+| 3   | 1    | - - d - - f d d | G2, B3, D4, G4   | G major          |
+| 3   | 5    | - - - f e - d f | D3, F#3, D4, A4  | D major          |
+| 4   | 1    | - - d - - f d d | G2, B3, D4, G4   | G major          |
+| 5   | 1    | - - - - a d d c | D3, A3, D4, F#4  | D major          |
+| 6   | 1    | - - - - c - a d | E3, B3, G4       | E minor          |
+| 7   | 1    | - - - c - - f c | B2, E4, F#4      | E (no 3rd)       |
+| 8   | 1    | - - a - - c a a | E2, G#3, B3, E4  | E major          |
+| 9   | 1    | - - - h - f f h | E3, B3, E4, B4   | E (no 3rd)       |
+| 9   | 5    | - - - - b - a c | D#3, B3, F#4     | B major          |
+| 10  | 1    | - - - - c b a a | E3, G3, B3, E4   | E minor          |
+| 10  | 3    | - - - c - a e - | B2, F#3, D#4     | B major          |
+| 10  | 4    | - - d - c - a a | G2, E3, B3, E4   | E minor          |
+| 11  | 1    | - - c - - d d c | F#2, A3, D4, F#4 | D major          |
+| 11  | 3    | - - a - c - a d | E2, E3, B3, G4   | E minor          |
+| 13  | 1    | - - - c - - d c | B2, D4, F#4      | B minor          |
+| 14  | 3    | - - - - c - a d | E3, B3, G4       | E minor          |
+| 15  | 1    | - - - - a - a c | D3, B3, F#4      | B minor          |
+| 15  | 3    | - - - d - - a a | C3, B3, E4       | C major (no 5th) |
+| 16  | 1    | - - - c - f e - | B2, B3, D#4      | B major (no 5th) |
+| 17  | 1    | - - - c - a a - | B2, F#3, B3      | B (no 3rd)       |
+| 17  | 3    | - - - - c - a d | E3, B3, G4       | E minor          |
+| 21  | 1    | - - a - - - a d | E2, B3, G4       | E minor          |
+| 24  | 1    | - - c - - - c f | F#2, C#4, A4     | F# minor         |
+| 24  | 3    | - - - c - - f c | B2, E4, F#4      | E (no 3rd)       |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Fingering       | Chord Name       | Occurrences | Notes |
+|-----------------|------------------|-------------|-------|
+| - - - c - a a - | B (no 3rd)       | 1           | 3     |
+| - - - - b - a c | B major          | 1           | 3     |
+| - - - c - a e - | B major          | 1           | 3     |
+| - - - c - f e - | B major (no 5th) | 1           | 3     |
+| - - - - a - a c | B minor          | 1           | 3     |
+| - - - c - - d c | B minor          | 1           | 3     |
+| - - - d - - a a | C major (no 5th) | 1           | 3     |
+| - - - - a d d c | D major          | 1           | 4     |
+| - - - f e - d f | D major          | 2           | 4     |
+| - - c - - d d c | D major          | 1           | 4     |
+| - - - c - - f c | E (no 3rd)       | 2           | 3     |
+| - - - h - f f h | E (no 3rd)       | 1           | 4     |
+| - - a - - c a a | E major          | 1           | 4     |
+| - - - - c - a d | E minor          | 3           | 3     |
+| - - - - c b a a | E minor          | 1           | 4     |
+| - - a - - - a d | E minor          | 1           | 3     |
+| - - a - c - a d | E minor          | 1           | 4     |
+| - - d - c - a a | E minor          | 1           | 4     |
+| - - c - - - c f | F# minor         | 1           | 3     |
+| - - d - - f d d | G major          | 4           | 4     |

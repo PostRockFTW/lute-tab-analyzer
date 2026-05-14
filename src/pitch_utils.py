@@ -56,7 +56,8 @@ class Tuning:
         return self.courses[idx]
 
 
-# Standard Renaissance 6-course lute, G-tuning
+# Standard Renaissance 8-course lute, G-tuning.
+# Intervals: P4, P4, M3, P4, P4 for courses 1-6; then M2, m3 for the bass courses.
 STANDARD_LUTE = Tuning(courses=[
     _pitch_to_midi("G4"),  # course 1
     _pitch_to_midi("D4"),  # course 2
@@ -64,10 +65,13 @@ STANDARD_LUTE = Tuning(courses=[
     _pitch_to_midi("F3"),  # course 4
     _pitch_to_midi("C3"),  # course 5
     _pitch_to_midi("G2"),  # course 6
+    _pitch_to_midi("F2"),  # course 7 — whole tone below course 6
+    _pitch_to_midi("D2"),  # course 8 — minor third below course 7
 ])
 
-# Guitar with G string tuned down to F# — all strings are a minor third below
-# standard lute G-tuning, making the transposition uniform across all courses.
+# Guitar with G string tuned down to F# — a minor third below standard G-tuning
+# on every course, including the bass diapasons.
+# Bass course intervals mirror the standard: M2 (c6→c7), m3 (c7→c8).
 GUITAR_F_SHARP = Tuning(courses=[
     _pitch_to_midi("E4"),   # course 1
     _pitch_to_midi("B3"),   # course 2
@@ -75,6 +79,8 @@ GUITAR_F_SHARP = Tuning(courses=[
     _pitch_to_midi("D3"),   # course 4
     _pitch_to_midi("A2"),   # course 5
     _pitch_to_midi("E2"),   # course 6
+    _pitch_to_midi("D2"),   # course 7 — whole tone below course 6
+    _pitch_to_midi("B1"),   # course 8 — minor third below course 7
 ])
 
 

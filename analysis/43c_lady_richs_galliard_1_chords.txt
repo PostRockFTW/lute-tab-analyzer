@@ -1,0 +1,62 @@
+# 43. The Lady Rich's galliard — Chord Table
+
+*Tuning (bass→treble): B1,D2,E2,A2,D3,F#3,B3,E4. Only beats with 3+ simultaneous notes shown.*
+
+| Bar | Beat | Fingering       | Pitches            | Chord Name        |
+|-----|------|-----------------|--------------------|-------------------|
+| 1   | 1    | - - a - - - a h | E2, B3, B4         | E (no 3rd)        |
+| 2   | 1    | - - - c - f e c | B2, B3, D#4, F#4   | B major           |
+| 2   | 5    | - - e - c - a a | G#2, E3, B3, E4    | E major           |
+| 3   | 1    | - - c - - d c c | F#2, A3, C#4, F#4  | F# minor          |
+| 4   | 1    | - - - c - f e c | B2, B3, D#4, F#4   | B major           |
+| 5   | 1    | - - a - c - a a | E2, E3, B3, E4     | E (no 3rd)        |
+| 5   | 5    | - - a - - - a e | E2, B3, G#4        | E major           |
+| 6   | 1    | - - - c - f e c | B2, B3, D#4, F#4   | B major           |
+| 6   | 5    | - - c - e - c f | F#2, F#3, C#4, A4  | F# minor          |
+| 7   | 1    | - - a - - - a e | E2, B3, G#4        | E major           |
+| 7   | 3    | - - - c - - a c | B2, B3, F#4        | B (no 3rd)        |
+| 7   | 5    | - - - c - - a e | B2, B3, G#4        | G# minor (no 5th) |
+| 8   | 1    | - - a - - c a a | E2, G#3, B3, E4    | E major           |
+| 9   | 1    | - - - c - - a c | B2, B3, F#4        | B (no 3rd)        |
+| 9   | 5    | - - - - c c a a | E3, G#3, B3, E4    | E major           |
+| 11  | 1    | - - e - c - a - | G#2, E3, B3        | E major           |
+| 11  | 5    | - - c - - - c f | F#2, C#4, A4       | F# minor          |
+| 12  | 1    | - - a - - - a e | E2, B3, G#4        | E major           |
+| 12  | 5    | - - e - c - - a | G#2, E3, E4        | E major (no 5th)  |
+| 13  | 1    | - - c - - d c c | F#2, A3, C#4, F#4  | F# minor          |
+| 13  | 5    | - - a - - - a e | E2, B3, G#4        | E major           |
+| 14  | 1    | - - - c - - e c | B2, D#4, F#4       | B major           |
+| 14  | 5    | - - - a - d c a | A2, A3, C#4, E4    | A major           |
+| 15  | 1    | - - - c - a e - | B2, F#3, D#4       | B major           |
+| 16  | 1    | - - - c - a a - | B2, F#3, B3        | B (no 3rd)        |
+| 21  | 5    | - - c - - e c c | F#2, A#3, C#4, F#4 | F# major          |
+| 22  | 1    | - - - c - a e - | B2, F#3, D#4       | B major           |
+| 23  | 5    | - - - c - a a c | B2, F#3, B3, F#4   | B (no 3rd)        |
+| 24  | 1    | - - a - - c a a | E2, G#3, B3, E4    | E major           |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Fingering       | Chord Name        | Occurrences | Notes |
+|-----------------|-------------------|-------------|-------|
+| - - - a - d c a | A major           | 1           | 4     |
+| - - - c - - a c | B (no 3rd)        | 2           | 3     |
+| - - - c - a a - | B (no 3rd)        | 1           | 3     |
+| - - - c - a a c | B (no 3rd)        | 1           | 4     |
+| - - - c - - e c | B major           | 1           | 3     |
+| - - - c - a e - | B major           | 2           | 3     |
+| - - - c - f e c | B major           | 3           | 4     |
+| - - a - - - a h | E (no 3rd)        | 1           | 3     |
+| - - a - c - a a | E (no 3rd)        | 1           | 4     |
+| - - - - c c a a | E major           | 1           | 4     |
+| - - a - - - a e | E major           | 4           | 3     |
+| - - a - - c a a | E major           | 2           | 4     |
+| - - e - c - a - | E major           | 1           | 3     |
+| - - e - c - a a | E major           | 1           | 4     |
+| - - e - c - - a | E major (no 5th)  | 1           | 3     |
+| - - c - - e c c | F# major          | 1           | 4     |
+| - - c - - - c f | F# minor          | 1           | 3     |
+| - - c - - d c c | F# minor          | 2           | 4     |
+| - - c - e - c f | F# minor          | 1           | 4     |
+| - - - c - - a e | G# minor (no 5th) | 1           | 3     |

@@ -1,7 +1,7 @@
 from __future__ import annotations
 from dataclasses import dataclass, field
 
-FRET_LETTERS = "abcdefghiklmnopqrstuvwxyz"  # j is not used in French tablature
+FRET_LETTERS = "abcdefghiklmn"  # a=open … n=12th fret; j skipped per French tab tradition
 
 _FRET_FROM_LETTER: dict[str, int] = {ch: i for i, ch in enumerate(FRET_LETTERS)}
 

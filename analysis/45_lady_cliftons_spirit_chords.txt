@@ -1,0 +1,56 @@
+# 45. Galliard — Chord Table
+
+*Tuning (bass→treble): B1,D2,E2,A2,D3,F#3,B3,E4. Only beats with 3+ simultaneous notes shown.*
+
+| Bar | Beat | Fingering       | Pitches             | Chord Name       |
+|-----|------|-----------------|---------------------|------------------|
+| 1   | 1    | - - - d - - b a | C3, C4, E4          | C major (no 5th) |
+| 1   | 4    | - - - c - - d c | B2, D4, F#4         | B minor          |
+| 3   | 1    | - - - d - - b a | C3, C4, E4          | C major (no 5th) |
+| 3   | 4    | - - - - a f d - | D3, B3, D4          | B minor (no 5th) |
+| 4   | 1    | - - - - c c a - | E3, G#3, B3         | E major          |
+| 4   | 3    | - - - a c d - - | A2, E3, A3          | A (no 3rd)       |
+| 4   | 4    | - - a - - c a - | E2, G#3, B3         | E major          |
+| 5   | 1    | - - - d - - b a | C3, C4, E4          | C major (no 5th) |
+| 6   | 1    | - - - - f f d - | G3, B3, D4          | G major          |
+| 6   | 4    | - - - - c c a - | E3, G#3, B3         | E major          |
+| 7   | 3    | - - - e - d - a | C#3, A3, E4         | A major          |
+| 9   | 2    | - - - c - - d c | B2, D4, F#4         | B minor          |
+| 14  | 2.5  | - - - - c c a - | E3, G#3, B3         | E major          |
+| 19  | 4    | - - - - c c a - | E3, G#3, B3         | E major          |
+| 20  | 2    | - - - - c c a - | E3, G#3, B3         | E major          |
+| 21  | 2    | - - - c - b d - | B2, G3, D4          | G major          |
+| 24  | 1    | - - - - c - a d | E3, B3, G4          | E minor          |
+| 24  | 2.5  | - - - c - - e c | B2, D#4, F#4        | B major          |
+| 27  | 3.5  | - - - - c c a - | E3, G#3, B3         | E major          |
+| 28  | 1    | - - - d c d - - | C3, E3, A3          | A minor          |
+| 28  | 1.5  | - - - - c c a - | E3, G#3, B3         | E major          |
+| 29  | 2.5  | - - - c - b d - | B2, G3, D4          | G major          |
+| 32  | 2    | - - a - - c a a | E2, G#3, B3, E4     | E major          |
+| 40  | 3.5  | - - - a c d c f | A2, E3, A3, C#4, A4 | A major          |
+| 47  | 2.5  | - - - c - f d - | B2, B3, D4          | B minor (no 5th) |
+| 48  | 1    | - - a - g - - h | E2, G#3, B4         | E major          |
+| 48  | 4    | - - - a c d c f | A2, E3, A3, C#4, A4 | A major          |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Fingering       | Chord Name       | Occurrences | Notes |
+|-----------------|------------------|-------------|-------|
+| - - - a c d - - | A (no 3rd)       | 1           | 3     |
+| - - - a c d c f | A major          | 2           | 5     |
+| - - - e - d - a | A major          | 1           | 3     |
+| - - - d c d - - | A minor          | 1           | 3     |
+| - - - c - - e c | B major          | 1           | 3     |
+| - - - c - - d c | B minor          | 2           | 3     |
+| - - - - a f d - | B minor (no 5th) | 1           | 3     |
+| - - - c - f d - | B minor (no 5th) | 1           | 3     |
+| - - - d - - b a | C major (no 5th) | 3           | 3     |
+| - - - - c c a - | E major          | 7           | 3     |
+| - - a - - c a - | E major          | 1           | 3     |
+| - - a - - c a a | E major          | 1           | 4     |
+| - - a - g - - h | E major          | 1           | 3     |
+| - - - - c - a d | E minor          | 1           | 3     |
+| - - - - f f d - | G major          | 1           | 3     |
+| - - - c - b d - | G major          | 2           | 3     |

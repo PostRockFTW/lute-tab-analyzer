@@ -1,0 +1,97 @@
+# 91. Susanna galliard — Chord Table
+
+*Tuning (bass→treble): B1,D2,E2,A2,D3,F#3,B3,E4. Only beats with 3+ simultaneous notes shown.*
+
+| Bar | Beat | Fingering       | Pitches            | Chord Name        |
+|-----|------|-----------------|--------------------|-------------------|
+| 1   | 1    | - - - c a a a - | B2, D3, F#3, B3    | B minor           |
+| 1   | 3    | - - d c - b d - | G2, B2, G3, D4     | G major           |
+| 1   | 5    | - - a c - b - a | E2, B2, G3, E4     | E minor           |
+| 2   | 1    | - - - c b - a c | B2, D#3, B3, F#4   | B major           |
+| 2   | 5    | - - - c b a a - | B2, D#3, F#3, B3   | B major           |
+| 3   | 1    | - - - c b - a c | B2, D#3, B3, F#4   | B major           |
+| 3   | 3    | - - - - a a a c | D3, F#3, B3, F#4   | B minor           |
+| 3   | 5    | - - - e d - - e | C#3, F3, G#4       | C# major          |
+| 4   | 1    | - - c - e d - f | F#2, F#3, A3, A4   | F# minor (no 5th) |
+| 4   | 4    | - - - - a d - c | D3, A3, F#4        | D major           |
+| 5   | 1    | - - - a c - c a | A2, E3, C#4, E4    | A major           |
+| 5   | 4    | - - - c e f d - | B2, F#3, B3, D4    | B minor           |
+| 6   | 1    | - - - e d c c - | C#3, F3, G#3, C#4  | C# major          |
+| 6   | 4    | - - - e c - c - | C#3, E3, C#4       | C# minor (no 5th) |
+| 7   | 1    | - - - c a - a - | B2, D3, B3         | B minor (no 5th)  |
+| 7   | 2    | - - c e - a a - | F#2, C#3, F#3, B3  | F# (no 3rd)       |
+| 8   | 1    | - - - c b a a - | B2, D#3, F#3, B3   | B major           |
+| 8   | 4    | - - - c b a a - | B2, D#3, F#3, B3   | B major           |
+| 9   | 1    | - - - c b a - c | B2, D#3, F#3, F#4  | B major           |
+| 9   | 3    | - - a - c - a d | E2, E3, B3, G4     | E minor           |
+| 10  | 1    | - - c e - e - c | F#2, C#3, A#3, F#4 | F# major          |
+| 11  | 1    | - - c - e e c - | F#2, F#3, A#3, C#4 | F# major          |
+| 11  | 3    | - - - e - c c - | C#3, G#3, C#4      | C# (no 3rd)       |
+| 12  | 1    | - - c - e e - - | F#2, F#3, A#3      | F# major (no 5th) |
+| 12  | 4    | - - c e e e - - | F#2, C#3, F#3, A#3 | F# major          |
+| 13  | 1    | - - - - a d - c | D3, A3, F#4        | D major           |
+| 13  | 4    | - - c - a - d - | F#2, D3, D4        | D major (no 5th)  |
+| 14  | 1    | - - - a - d c - | A2, A3, C#4        | A major (no 5th)  |
+| 14  | 4    | - - d c - b a - | G2, B2, G3, B3     | G major (no 5th)  |
+| 15  | 1    | - - - - a d d - | D3, A3, D4         | D (no 3rd)        |
+| 15  | 2    | - - - a c - d - | A2, E3, D4         | D (no 3rd)        |
+| 15  | 4    | - - - - c d c - | E3, A3, C#4        | A major           |
+| 16  | 3    | - - - - a a d - | D3, F#3, D4        | D major (no 5th)  |
+| 17  | 1    | - - - c a - a c | B2, D3, B3, F#4    | B minor           |
+| 17  | 5    | - - c e - d - c | F#2, C#3, A3, F#4  | F# minor          |
+| 18  | 1    | - - c - e - c f | F#2, F#3, C#4, A4  | F# minor          |
+| 19  | 1    | - - - a c - c a | A2, E3, C#4, E4    | A major           |
+| 19  | 5    | - - a - - b a a | E2, G3, B3, E4     | E minor           |
+| 20  | 1    | - - a - c - a d | E2, E3, B3, G4     | E minor           |
+| 21  | 1    | - - d f - f d - | G2, D3, B3, D4     | G major           |
+| 21  | 5    | - - - f e d d - | D3, F#3, A3, D4    | D major           |
+| 22  | 3.5  | - - - c - a d - | B2, F#3, D4        | B minor           |
+| 23  | 1    | - - a - - b a - | E2, G3, B3         | E minor           |
+| 23  | 3    | - - c - e - - c | F#2, F#3, F#4      | F#                |
+| 24  | 3    | - - - c b - a - | B2, D#3, B3        | B major (no 5th)  |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Fingering       | Chord Name        | Occurrences | Notes |
+|-----------------|-------------------|-------------|-------|
+| - - - - c d c - | A major           | 1           | 3     |
+| - - - a c - c a | A major           | 2           | 4     |
+| - - - a - d c - | A major (no 5th)  | 1           | 3     |
+| - - - c b - a c | B major           | 2           | 4     |
+| - - - c b a - c | B major           | 1           | 4     |
+| - - - c b a a - | B major           | 3           | 4     |
+| - - - c b - a - | B major (no 5th)  | 1           | 3     |
+| - - - - a a a c | B minor           | 1           | 4     |
+| - - - c - a d - | B minor           | 1           | 3     |
+| - - - c a - a c | B minor           | 1           | 4     |
+| - - - c a a a - | B minor           | 1           | 4     |
+| - - - c e f d - | B minor           | 1           | 4     |
+| - - - c a - a - | B minor (no 5th)  | 1           | 3     |
+| - - - e - c c - | C# (no 3rd)       | 1           | 3     |
+| - - - e d - - e | C# major          | 1           | 3     |
+| - - - e d c c - | C# major          | 1           | 4     |
+| - - - e c - c - | C# minor (no 5th) | 1           | 3     |
+| - - - - a d d - | D (no 3rd)        | 1           | 3     |
+| - - - a c - d - | D (no 3rd)        | 1           | 3     |
+| - - - - a d - c | D major           | 2           | 3     |
+| - - - f e d d - | D major           | 1           | 4     |
+| - - - - a a d - | D major (no 5th)  | 1           | 3     |
+| - - c - a - d - | D major (no 5th)  | 1           | 3     |
+| - - a - - b a - | E minor           | 1           | 3     |
+| - - a - - b a a | E minor           | 1           | 4     |
+| - - a - c - a d | E minor           | 2           | 4     |
+| - - a c - b - a | E minor           | 1           | 4     |
+| - - c - e - - c | F#                | 1           | 3     |
+| - - c e - a a - | F# (no 3rd)       | 1           | 4     |
+| - - c - e e c - | F# major          | 1           | 4     |
+| - - c e - e - c | F# major          | 1           | 4     |
+| - - c e e e - - | F# major          | 1           | 4     |
+| - - c - e e - - | F# major (no 5th) | 1           | 3     |
+| - - c - e - c f | F# minor          | 1           | 4     |
+| - - c e - d - c | F# minor          | 1           | 4     |
+| - - c - e d - f | F# minor (no 5th) | 1           | 4     |
+| - - d c - b d - | G major           | 1           | 4     |
+| - - d f - f d - | G major           | 1           | 4     |
+| - - d c - b a - | G major (no 5th)  | 1           | 4     |

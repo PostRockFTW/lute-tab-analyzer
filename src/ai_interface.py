@@ -12,57 +12,31 @@ import json
 import sys
 import anthropic
 from src.models import Piece
-from src.pitch_utils import Tuning, STANDARD_LUTE, tuning_table
+from src.pitch_utils import Tuning, STANDARD_LUTE, tuning_table, note_name
 
 _MODEL = "claude-sonnet-4-6"
 
 
 def _build_tablature_knowledge(tuning: Tuning) -> str:
     table = tuning_table(tuning)
-    return f"""
-## French Lute Tablature Reference
-
-**Courses (strings):** Numbered 1–N from highest (treble) to lowest (bass).
-Open-string pitches for this instrument (course → pitch):
-{table}
-
-Baroque lutes add bass courses (7+), but tuning varies — always check the piece's "tuning" field.
-
-**Fret letters (French style):**
-  a=open  b=1st  c=2nd  d=3rd  e=4th  f=5th  g=6th  h=7th  i=8th
-  j=9th   k=10th l=11th m=12th n=13th o=14th p=15th
-Each fret represents one chromatic semitone above the open pitch.
-
-**Chords:** Multiple notes sharing the same beat are a chord — they are played
-simultaneously. A beat with only one note is a single melody note or bass note.
-
-**Durations:** whole, half, quarter, eighth, sixteenth, thirty_second.
-A "dotted" beat lasts 1.5× its nominal duration.
-
-**Data structure you receive:**
-{
-  "title": str,
-  "composer": str,
-  "tuning": str,           // e.g. "G-tuning" or specific note sequence
-  "time_signature": str,
-  "num_courses": int,
-  "bars": [
-    {
-      "number": int,       // 1-based bar number
-      "beats": [
-        {
-          "duration": str,
-          "dotted": bool,
-          "is_rest": bool,
-          "notes": [
-            {"course": int, "fret": int, "letter": str}
-          ]
-        }
-      ]
-    }
-  ]
-}
-"""
+    return (
+        "## French Lute Tablature Reference\n\n"
+        "**Courses (strings):** Numbered 1-N from highest (treble) to lowest (bass).\n"
+        "Open-string pitches for this instrument (course -> pitch):\n"
+        + table + "\n\n"
+        "Baroque lutes add bass courses (7+), but tuning varies -- always check the piece's \"tuning\" field.\n\n"
+        "**Fret letters (French style, j is skipped):**\n"
+        "  a=open  b=1st  c=2nd  d=3rd  e=4th  f=5th  g=6th  h=7th  i=8th\n"
+        "  k=9th   l=10th m=11th n=12th (octave)\n"
+        "Each fret is one chromatic semitone above the open pitch.\n\n"
+        "**Chords:** Multiple notes on the same beat are played simultaneously.\n"
+        "A beat with one note is a single melody or bass note.\n\n"
+        "**Durations:** whole, half, quarter, eighth, sixteenth, thirty_second.\n"
+        "A dotted beat lasts 1.5x its nominal value.\n\n"
+        "**Data structure you receive:**\n"
+        "Each bar has a list of beats; each beat has duration, dotted, is_rest, "
+        "and notes (each note has course, fret, letter).\n"
+    )
 
 _RESPONSE_GUIDELINES = """
 ## How to respond
@@ -81,6 +55,18 @@ If the query is ambiguous, answer the most musically useful interpretation and n
 """
 
 
+def _enrich_with_pitches(piece_dict: dict, tuning: Tuning) -> dict:
+    """Add a pre-computed 'pitch' field to every note so Claude doesn't do arithmetic."""
+    for bar in piece_dict["bars"]:
+        for beat in bar["beats"]:
+            for note in beat["notes"]:
+                try:
+                    note["pitch"] = note_name(note["course"], note["fret"], tuning)
+                except (ValueError, IndexError):
+                    note["pitch"] = "?"
+    return piece_dict
+
+
 class StreamingAnalyzer:
     """
     Holds a parsed Piece and streams Claude analysis responses.
@@ -92,8 +78,10 @@ class StreamingAnalyzer:
     def __init__(self, piece: Piece, tuning: Tuning | None = None) -> None:
         self.piece = piece
         self.client = anthropic.Anthropic()
-        self._piece_json = json.dumps(piece.to_dict(), indent=2)
         resolved_tuning = tuning if tuning is not None else STANDARD_LUTE
+        self._piece_json = json.dumps(
+            _enrich_with_pitches(piece.to_dict(), resolved_tuning), indent=2
+        )
         self._system = [
             {
                 "type": "text",
@@ -115,7 +103,7 @@ class StreamingAnalyzer:
         enc = sys.stdout.encoding or "utf-8"
         with self.client.messages.stream(
             model=_MODEL,
-            max_tokens=2048,
+            max_tokens=8096,
             system=self._system,
             messages=[{"role": "user", "content": query}],
         ) as stream:

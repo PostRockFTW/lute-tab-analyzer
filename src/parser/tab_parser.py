@@ -288,9 +288,16 @@ def parse_tab_file(content: str) -> Piece:
             # voices into one Beat so that pattern matching sees every note that
             # sounds at this rhythmic position.
             rest = line[1:]
-            flag_ch = rest[0] if rest and rest[0].isdigit() else "2"
+            if rest and rest[0].isdigit():
+                flag_ch = rest[0]
+                rest = rest[1:]
+            else:
+                flag_ch = "2"
+            # Strip tie/modifier flags the same way _parse_flag does
+            while rest and rest[0] in ("t", "!", "|", "Q", "@", "B", "W"):
+                rest = rest[1:]
             duration = DURATION_FROM_FLAG.get(flag_ch, "quarter")
-            all_notes: list[Note] = _extract_notes(rest[1:] if rest and rest[0].isdigit() else rest, start_course=1)
+            all_notes: list[Note] = _extract_notes(rest, start_course=1)
 
             # Consume x-continuation AND additional #-voice lines that belong
             # to the same beat (i.e. the entire grid block until a line that
@@ -303,11 +310,13 @@ def parse_tab_file(content: str) -> Piece:
                     all_notes.extend(_extract_notes(next_line[1:], start_course=used))
                     i += 1
                 elif next_line.startswith("#"):
-                    # New simultaneous voice — parse and fold its notes in
+                    # New simultaneous voice — strip flag and modifier, then fold notes in
                     vrest = next_line[1:]
-                    all_notes.extend(
-                        _extract_notes(vrest[1:] if vrest and vrest[0].isdigit() else vrest, start_course=1)
-                    )
+                    if vrest and vrest[0].isdigit():
+                        vrest = vrest[1:]
+                    while vrest and vrest[0] in ("t", "!", "|", "Q", "@", "B", "W"):
+                        vrest = vrest[1:]
+                    all_notes.extend(_extract_notes(vrest, start_course=1))
                     i += 1
                 else:
                     break

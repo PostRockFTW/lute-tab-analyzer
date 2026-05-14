@@ -1,0 +1,63 @@
+# 62. Fortune, my foe — Chord Table
+
+*Tuning (bass→treble): B1,D2,E2,A2,D3,F#3,B3,E4. Only beats with 3+ simultaneous notes shown.*
+
+| Bar | Beat | Fingering       | Pitches         | Chord Name       |
+|-----|------|-----------------|-----------------|------------------|
+| 2   | 1    | - - - c - a a - | B2, F#3, B3     | B (no 3rd)       |
+| 3   | 1    | - - - c - a a - | B2, F#3, B3     | B (no 3rd)       |
+| 3   | 5    | - - c - - a c - | F#2, F#3, C#4   | F# (no 3rd)      |
+| 4   | 1    | - - - c - a d - | B2, F#3, D4     | B minor          |
+| 4   | 5    | - - - a - d c - | A2, A3, C#4     | A major (no 5th) |
+| 4   | 7    | - - - c - a a - | B2, F#3, B3     | B (no 3rd)       |
+| 6   | 3    | - - c - - a c - | F#2, F#3, C#4   | F# (no 3rd)      |
+| 7   | 1    | - - - c - a a - | B2, F#3, B3     | B (no 3rd)       |
+| 7   | 7    | - - c - - a c - | F#2, F#3, C#4   | F# (no 3rd)      |
+| 8   | 1    | - - - c - a d - | B2, F#3, D4     | B minor          |
+| 9   | 1    | - - c - - a c - | F#2, F#3, C#4   | F# (no 3rd)      |
+| 10  | 1    | - - - - a d d c | D3, A3, D4, F#4 | D major          |
+| 13  | 1    | - - - a - d c a | A2, A3, C#4, E4 | A major          |
+| 14  | 1    | - - - a - d c - | A2, A3, C#4     | A major (no 5th) |
+| 15  | 1    | - - - c - - a c | B2, B3, F#4     | B (no 3rd)       |
+| 16  | 1    | - - a - - - a d | E2, B3, G4      | E minor          |
+| 16  | 2    | - - c - - a c - | F#2, F#3, C#4   | F# (no 3rd)      |
+| 17  | 1    | - - - c - a a - | B2, F#3, B3     | B (no 3rd)       |
+| 18  | 1    | - - - - a d d c | D3, A3, D4, F#4 | D major          |
+| 20  | 1    | - - - - a - d c | D3, D4, F#4     | D major (no 5th) |
+| 21  | 1    | - - - a - d c a | A2, A3, C#4, E4 | A major          |
+| 22  | 1    | - - - - a - h f | D3, F#4, A4     | D major          |
+| 23  | 1    | - - - c - a d - | B2, F#3, D4     | B minor          |
+| 24  | 1    | - - a - - - a d | E2, B3, G4      | E minor          |
+| 24  | 2    | - - c - - a c - | F#2, F#3, C#4   | F# (no 3rd)      |
+| 25  | 1    | - - - c - a a - | B2, F#3, B3     | B (no 3rd)       |
+| 26  | 1    | - - - c - a a - | B2, F#3, B3     | B (no 3rd)       |
+| 27  | 1    | - - - c - a d - | B2, F#3, D4     | B minor          |
+| 28  | 1    | - - - c - a d - | B2, F#3, D4     | B minor          |
+| 29  | 1    | - - - b - a c - | A#2, F#3, C#4   | F# major         |
+| 29  | 5    | - - c - - a c - | F#2, F#3, C#4   | F# (no 3rd)      |
+| 30  | 3    | - - - b - a c - | A#2, F#3, C#4   | F# major         |
+| 31  | 1    | - - - c - a a - | B2, F#3, B3     | B (no 3rd)       |
+| 32  | 1    | - - - c - a d - | B2, F#3, D4     | B minor          |
+| 33  | 1    | - - c - - a c - | F#2, F#3, C#4   | F# (no 3rd)      |
+| 40  | 2    | - - c - - a c - | F#2, F#3, C#4   | F# (no 3rd)      |
+| 41  | 1    | - - - c - a a - | B2, F#3, B3     | B (no 3rd)       |
+| 48  | 2    | - - c - - a c - | F#2, F#3, C#4   | F# (no 3rd)      |
+| 49  | 1    | - - - c - a a - | B2, F#3, B3     | B (no 3rd)       |
+
+---
+
+## Summary of Distinct Chord Types
+
+| Fingering       | Chord Name       | Occurrences | Notes |
+|-----------------|------------------|-------------|-------|
+| - - - a - d c a | A major          | 2           | 4     |
+| - - - a - d c - | A major (no 5th) | 2           | 3     |
+| - - - c - - a c | B (no 3rd)       | 1           | 3     |
+| - - - c - a a - | B (no 3rd)       | 10          | 3     |
+| - - - c - a d - | B minor          | 6           | 3     |
+| - - - - a - h f | D major          | 1           | 3     |
+| - - - - a d d c | D major          | 2           | 4     |
+| - - - - a - d c | D major (no 5th) | 1           | 3     |
+| - - a - - - a d | E minor          | 2           | 3     |
+| - - c - - a c - | F# (no 3rd)      | 10          | 3     |
+| - - - b - a c - | F# major         | 2           | 3     |
